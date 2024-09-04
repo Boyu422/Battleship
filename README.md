@@ -1,63 +1,63 @@
-# Battleship
+# Battleship Game
 
-This project implements the MVC (Model-View-Controller) framework to design the classic game "Battleship" using Java Swing components. The Client-Server (C/S) architecture is implemented to support multiplayer functionality. All source code is located in the `src` directory.
+This project is a Java-based implementation of the classic game **Battleship**, designed using the **MVC (Model-View-Controller)** framework. The game supports multiplayer functionality through a **Client-Server (C/S)** architecture. All source code is available in the `src` directory.
 
 ## Screenshots
 
-### Battleship Game GUI:
+### Game Interface:
 ![Game GUI](https://github.com/Boyu422/Battleship/blob/main/image/README/game.png)
 
-### Game Server:
+### Server Interface:
 ![Game Server](https://github.com/Boyu422/Battleship/blob/main/image/README/server.png)
 
-### Game Client:
+### Client Interface:
 ![Game Client](https://github.com/Boyu422/Battleship/blob/main/image/README/client.png)
 
 ### Game Launcher:
 ![Game Launcher](https://github.com/Boyu422/Battleship/blob/main/image/README/luncher.png)
 
 ## Game Features
-- The game follows the standard rules of [Battleship](https://en.wikipedia.org/wiki/Battleship).
-- Supports internationalization with both English and Chinese currently available.
-  
-  __Internationalization:__
+- Follows the traditional rules of [Battleship](https://en.wikipedia.org/wiki/Battleship).
+- Supports **internationalization** with English and Chinese languages available.
   ![Internationalization](https://github.com/Boyu422/Battleship/blob/main/image/README/internatioanliziation.png)
-
-- Allows for multiple players.
-- Offers both design mode and random mode for ship placement.
-  __Design Mode:__ The players can manually place the ships for their opponents.
-  ![image](https://github.com/Boyu422/Battleship/blob/main/image/README/Design%20Mode.png)
-  __Ramdom Mode:__ The opponent's ships will be randomly generated.
-- Players can increase the difficulties by increasing the dimensions of the game up to 9.
-  __Dimensions:__ ![image](https://github.com/Boyu422/Battleship/blob/main/image/README/Dimension.png)
-- Players can check the solution from the menu.  
-  __Solutions:__ ![image](https://github.com/Boyu422/Battleship/blob/main/image/README/Solution.png)
-- Players can customize the colors from the menu.
-  __Colors Customization:__ ![image](https://github.com/Boyu422/Battleship/blob/main/image/README/Colors.png)
+  
+- Multiplayer functionality via client-server architecture.
+- Offers both **Design Mode** and **Random Mode** for ship placement:
+  - **Design Mode:** Players manually place ships for their opponents.
+    ![Design Mode](https://github.com/Boyu422/Battleship/blob/main/image/README/Design%20Mode.png)
+  - **Random Mode:** Opponent's ships are randomly placed.
+  
+- Adjustable game dimensions, allowing players to increase difficulty by expanding the grid size (up to 9x9).
+  ![Dimensions](https://github.com/Boyu422/Battleship/blob/main/image/README/Dimension.png)
+  
+- **Solution View** option allows players to view the correct ship placements after a game.
+  ![Solution](https://github.com/Boyu422/Battleship/blob/main/image/README/Solution.png)
+  
+- **Color Customization** allows players to personalize their game board's appearance.
+  ![Colors Customization](https://github.com/Boyu422/Battleship/blob/main/image/README/Colors.png)
 
 ## MVC Components
 
-- **GameModel Class:** Manages all game data, such as player health, game time, and ship status.
-- **GameView Class:** Implements the game’s user interface using Java Swing components.
-- **GameController Class:** Handles game events like hitting an adversary's ship through event listeners.
+- **GameModel Class:** Manages core game data, including player health, game time, and ship status.
+- **GameView Class:** Implements the graphical user interface using Java Swing components.
+- **GameController Class:** Handles game interactions, such as responding to player actions and managing game flow through event listeners.
 
-## C/S Architecture for Multiplayer
+## Client-Server (C/S) Architecture for Multiplayer
 
-The project facilitates communication between the game client and server via the TCP protocol using a custom-designed protocol.
+The multiplayer functionality is supported by a custom communication protocol over **TCP**. Here's how the server and client interact:
 
 - **GameServer:**
-  1. Manages all TCP connections using sockets and threads, supporting multiple threads in multi-threading mode.
-  2. Transmits and receives game configuration and data from the client.
-  3. Ranks players by their points after the game concludes.
-  4. Processes client requests by tokenizing each request, verifying the protocol, and responding accordingly.
+  1. Manages all TCP connections using sockets and threads for handling multiple clients.
+  2. Facilitates sending and receiving game configurations and player data.
+  3. Provides player rankings based on performance at the end of each game.
+  4. Processes client requests by tokenizing, verifying, and responding according to the game’s protocol.
 
 ## Compilation Instructions
 
-To compile the project on Windows, ensure that your OpenJDK version is 20.0.2 or higher. You can compile the program by running the provided batch file `JAP-A123.bat`. Upon successful compilation, the binary code will be generated, and the project will automatically launch.
+To compile the project on Windows, ensure you have **OpenJDK 20.0.2** or higher installed. Run the provided batch script `JAP-A123.bat` to compile the source code. Upon successful compilation, the game will automatically launch with the generated binaries.
 
 ## Upcoming Features
-
-1. Dual-player versus mode
-2. Linux compilation script
-3. Enhanced colored user interface
-4. NoSQL database integration using MongoDB
+1. **Two-player versus mode**
+2. **Linux support** with a new compilation script
+3. **Enhanced color UI** for a more dynamic gaming experience
+4. **NoSQL database integration** using MongoDB for storing player data and scores
