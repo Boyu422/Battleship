@@ -25,6 +25,15 @@ This project implements the MVC (Model-View-Controller) framework to design the 
 
 - Allows for multiple players.
 - Offers both design mode and random mode for ship placement.
+  __Design Mode:__ The players can manually place the ships for their opponents.
+  ![image](https://github.com/Boyu422/Battleship/blob/main/image/README/Design%20Mode.png)
+  __Ramdom Mode:__ The opponent's ships will be randomly generated.
+- Players can increase the difficulties by increasing the dimensions of the game up to 9.
+  __Dimensions:__ ![image](https://github.com/Boyu422/Battleship/blob/main/image/README/Dimension.png)
+- Players can check the solution from the menu.  
+  __Solutions:__ ![image](https://github.com/Boyu422/Battleship/blob/main/image/README/Solution.png)
+- Players can customize the colors from the menu.
+  __Colors Customization:__ ![image](https://github.com/Boyu422/Battleship/blob/main/image/README/Colors.png)
 
 ## MVC Components
 
