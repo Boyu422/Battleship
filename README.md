@@ -1,5 +1,17 @@
 # Battleship
-The project implements the MVC framework to design the game 'Battleship'.
+The project implements the MVC framework to design the game 'Battleship' by Java Swing components. The C/S architecture was implemented to provide a solution for multiple players.
+
+# Battleship Game GUI:
+![image](https://github.com/Boyu422/Battleship/blob/main/image/README/game.png)
+
+# Game Server:
+![image](https://github.com/Boyu422/Battleship/blob/main/image/README/server.png)
+
+# Game Client:
+![image](https://github.com/Boyu422/Battleship/blob/main/image/README/client.png)
+
+# Game launcher:
+![image](https://github.com/Boyu422/Battleship/blob/main/image/README/luncher.png)
 
 Game features:
 - The game rule is as same as game Battleship itself
