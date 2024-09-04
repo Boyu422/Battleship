@@ -1,44 +1,54 @@
 # Battleship
-The project implements the MVC framework to design the game 'Battleship' by Java Swing components. The C/S architecture was implemented to provide a solution for multiple players.
 
-__Battleship Game GUI:__
-![image](https://github.com/Boyu422/Battleship/blob/main/image/README/game.png)
+This project implements the MVC (Model-View-Controller) framework to design the classic game "Battleship" using Java Swing components. The Client-Server (C/S) architecture is implemented to support multiplayer functionality. All source code is located in the `src` directory.
 
-__Game Server:__
-![image](https://github.com/Boyu422/Battleship/blob/main/image/README/server.png)
+## Screenshots
 
-__Game Client__
-![image](https://github.com/Boyu422/Battleship/blob/main/image/README/client.png)
+### Battleship Game GUI:
+![Game GUI](https://github.com/Boyu422/Battleship/blob/main/image/README/game.png)
 
-__Game launcher__
-![image](https://github.com/Boyu422/Battleship/blob/main/image/README/luncher.png)
+### Game Server:
+![Game Server](https://github.com/Boyu422/Battleship/blob/main/image/README/server.png)
 
-## Game features:
-- The game rule is as same as game Battleship itself
-- The game supports internationlization, Chinese' and English are currently supported
-- The game allows multiple players
-- The game supports design mode and random mode
+### Game Client:
+![Game Client](https://github.com/Boyu422/Battleship/blob/main/image/README/client.png)
 
-## MVC Game Components:
-- GameModel Class: Stores all the game running data such as user player's life, game playing time, the ship state information...
-- GameView Class: Implements the game user interface by Java Swing Components
-- GameController Class: Handles all the game events such as hitting adversary ship by Event Listeners
+### Game Launcher:
+![Game Launcher](https://github.com/Boyu422/Battleship/blob/main/image/README/luncher.png)
 
-## C/S Architecture for Servlet:
-The project supports intercommucation between game client and game server through TCP protocol with desinged Protocol.
-- GameServer:
-  1. The server will handle all the TCP connections by socket and threads, the server is able to handle multiple threads under multi-threading mode
-  2. The server is able to transmit and receive the game configuration and game data from the game client
-  3. After the game finished, the server will rank all the players by their points
-  4. The game server processes the client request by tokenize each request to check its protocol, then the server
-     will response the request
+## Game Features
+- The game follows the standard rules of [Battleship](https://en.wikipedia.org/wiki/Battleship).
+- Supports internationalization with both English and Chinese currently available.
+  
+  __Internationalization:__
+  ![Internationalization](https://github.com/Boyu422/Battleship/blob/main/image/README/internatioanliziation.png)
 
-## Compile the project:
-The Windows Bash for project compilation is available, you can just simply run the bash 'JAP-A123.bat' to compile the program. Once the 
-project successfully compiled, the binary code will be generated and the project will be automatcially launched.
+- Allows for multiple players.
+- Offers both design mode and random mode for ship placement.
 
-## Upcomming features:
-1. Dual player versus mode
-2. Linux compailation bash
-3. Colored user interface
-4. MySQL database association by JDBC
+## MVC Components
+
+- **GameModel Class:** Manages all game data, such as player health, game time, and ship status.
+- **GameView Class:** Implements the game’s user interface using Java Swing components.
+- **GameController Class:** Handles game events like hitting an adversary's ship through event listeners.
+
+## C/S Architecture for Multiplayer
+
+The project facilitates communication between the game client and server via the TCP protocol using a custom-designed protocol.
+
+- **GameServer:**
+  1. Manages all TCP connections using sockets and threads, supporting multiple threads in multi-threading mode.
+  2. Transmits and receives game configuration and data from the client.
+  3. Ranks players by their points after the game concludes.
+  4. Processes client requests by tokenizing each request, verifying the protocol, and responding accordingly.
+
+## Compilation Instructions
+
+To compile the project on Windows, ensure that your OpenJDK version is 20.0.2 or higher. You can compile the program by running the provided batch file `JAP-A123.bat`. Upon successful compilation, the binary code will be generated, and the project will automatically launch.
+
+## Upcoming Features
+
+1. Dual-player versus mode
+2. Linux compilation script
+3. Enhanced colored user interface
+4. NoSQL database integration using MongoDB
